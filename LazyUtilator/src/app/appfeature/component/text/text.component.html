@@ -1,0 +1,5 @@
+<div class="m-5">
+  <ckeditor [(ngModel)]="mycontent" #myckeditor [config]="ckeConfig" debounce="500" (change)="OnChange($event)">
+  </ckeditor>
+</div>
+<div [innerHTML]="mycontent"></div>

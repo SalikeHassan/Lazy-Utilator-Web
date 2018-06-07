@@ -1,0 +1,44 @@
+<mat-drawer-container class="example-container">
+  <app-toolbar></app-toolbar>
+  <mat-drawer #drawer class="example-sidenav mat-elevation-z10" mode="side" opened>
+    <div class="card">
+      <img class="card-img-top img-fluid rounded-circle" src="../../../../assets/images/pp2.jpg" alt="" style="width:200px;height: 160px;">
+      <div class="card-body">
+        <h4 class="card-title">Salike Hassan
+          <i class="material-icons">edit</i>
+        </h4>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a [routerLink]="['dashboard']">
+          <i class="material-icons">dashboard</i> Dashboard</a>
+      </li>
+      <li>
+        <a [routerLink]="['notes']">
+          <i class="material-icons">notes</i> Notes</a>
+      </li>
+      <li>
+        <a [routerLink]="['text']">
+          <i class="material-icons">short_text</i> Text</a>
+      </li>
+      <li>
+        <a [routerLink]="['book']">
+          <i class="material-icons">book</i> Books</a>
+      </li>
+      <li>
+        <a [routerLink]="['photo']">
+          <i class="material-icons">photo</i> Photos</a>
+      </li>
+    </ul>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+</mat-drawer-container>
